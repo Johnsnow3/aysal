@@ -307,7 +307,7 @@ const APIs = {
       throw lastError;
     };
     
-    const apiUrl = `https://eliteprotech-apis.zone.id/ytdown?url=${encodeURIComponent(youtubeUrl)}&format=mp3`;
+    const apiUrl = `https://eliteprotech-apis.zone.id/download/ytdown?url=${encodeURIComponent(youtubeUrl)}&format=mp3`;
     const res = await tryRequest(() => axios.get(apiUrl, AXIOS_DEFAULTS));
     if (res?.data?.success && res?.data?.downloadURL) {
       return {
